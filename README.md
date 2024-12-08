@@ -2,7 +2,12 @@
 
 Spotify Clone built with HTML, CSS, and JavaScript. This web app allows users to play, pause, seek, and adjust the volume of audio tracks. It also includes features for navigating through a playlist, showing track information, and controlling playback.
 
-![Screenshot 2024-12-08 121017](https://github.com/user-attachments/assets/0c7170cf-6642-491a-adf5-8316f7bdd903)
+![Screenshot 2024-12-08 143830](https://github.com/user-attachments/assets/bfa89522-d2a7-45cf-99b2-9831dc89bd92)
+
+![Screenshot 2024-12-08 143856](https://github.com/user-attachments/assets/b7bf13bb-9b5c-4602-b4f1-743e3c98d998)
+![Screenshot 2024-12-08 143840](https://github.com/user-attachments/assets/21af9264-b436-47af-902c-1c7cab85ab75)
+
+
 
 
 
@@ -61,4 +66,3 @@ Spotify Clone built with HTML, CSS, and JavaScript. This web app allows users to
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
