@@ -42,12 +42,12 @@ Spotify Clone built with HTML, CSS, and JavaScript. This web app allows users to
 
 1. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/AR-47/MusicPlayer-Spotify.git
+    git clone https://github.com/AR-47/SpotifyClone.git
     ```
    
 2. Navigate to the project folder:
     ```bash
-    cd MusicPlayer-Spotify
+    cd SpotifyClone
     ```
 
 3. Open the `index.html` file in your browser to view and interact with the music player.
