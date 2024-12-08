@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player</title>
+    <link rel="icon" href="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-nav">
+            <div class="logo">
+                <a href=""><img src="images/logo-new.png" alt=""></a>
+            </div>
+
+            <ul>
+                <li><a href="">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    <span>Home</span>
+                </a></li>
+
+                <li><a href="">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <span>Search</span>
+                </a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-nav box2">
+
+            <ul>
+                <li><a href="">
+                    <span><i class="fa-solid fa-book"></i></span>
+                    <span class="library">Your Library</span>
+                </a></li>
+                
+                <li>
+                    <div class="sidebar-scroll">
+                        <div class="create-playlist">
+                            <h4>Create your first playlist</h4>
+                            <p>It's easy, we'll help you</p>
+                            <a href="" class="btn-link">
+                                <button>Create Playlist</button>
+                            </a>
+                        </div>
+                        <div class="create-playlist">
+                            <h4>Let's find some podcasts to follow</h4>
+                            <p>We'll keep you updates on new episodes</p>
+                            <a href="", class="btn-link"><button>Browse Podcasts</button></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="privacy">
+                <ul>
+                    <li>
+                        <a href="">Legal</a>
+                        <a href="">Safety Ads privacy</a>
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="">Cookies</a>
+                        <a href="">About Ads</a>
+                        <a href="">Accessability</a>
+                    </li>
+                    <li>
+                        <a href="" style="color: white;">Cookies</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="eng-btn">
+                <a href="" class="eng-link">
+                    <button>
+                        <i class="fa-light fa-globe"></i> English
+                    </button>
+                </a>
+            </div>
+                      
+        </div> 
+
+    </div> 
+
+
+    <div class="main-section">
+        <div class="top-nav">
+            <div class="prev-btn">
+                <button><i class="fa-solid fa-chevron-left"></i></button>
+                <button><i class="fa-solid fa-chevron-right"></i></button>
+
+            </div>
+            <div class="search-bar">
+                <div class="icon-container">
+                    <a href="" class="home-btn"><i class="fa-solid fa-house"></i></a>
+                </div>
+                
+                <div class="search-container">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <input type="text" placeholder="What do you want to play?" class="search-input">
+                </div>
+                <div class="icon-container">
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+            <div class="login-btn">
+                <a href="sign-up.html"><button class="sign-up">Sign Up</button></a>
+                <a href="login.html"><button class="login">Login</button></a>
+            </div>
+        </div>
+
+        <div class="spotify-playlist">
+            <a href=""><h2>Popular Singles</h2></a>
+            <div class="card">
+                <div class="item" data-audio="audio/Not Like Us.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e021ea0c62b2339cbf493a999ad" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Not Like Us</h4>
+                    <a href="https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg"><P>Kendrick Lamar</P></a>
+
+                </div>   
+
+                <div class="item" data-audio="audio/Tailor Swif.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Tailor Swif</h4>
+                    <a href="https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca"><P>A$AP Rocky</P></a>
+
+                </div>    
+                
+                <div class="item" data-audio="audio/Everyday Hustle.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02a46b07c291e6dfdee13b3ee8" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <div class ="Song1">
+                    <h4>Everyday Hustle</h4>
+                        <a href="https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i"><span>Future,</span></a>
+                        <a href="https://open.spotify.com/artist/0iEtIxbK0KxaSlF7G42ZOp"><span>Metro Boomin,</span></a>
+                        <a href="https://open.spotify.com/artist/1sBkRIssrMs1AbVkOJbc7a"><span>Rick Ross</span></a>
+                    </div>  
+
+                </div>    
+                
+                <div class="item" data-audio="audio/FE!N.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02881d8d8378cd01099babcd44" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>FE!N</h4>
+                    <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"><span>Travis Scott,</span></a>
+                    <a href="https://open.spotify.com/artist/699OTQXzgjhIYAHMy9RyPD"><span>Playboi Carti</span></a>
+
+                </div>    
+                
+                <div class="item" data-audio="audio/XO Tour Llif3.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02aab4824c720639a6a2d7d932" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>XO Tour Llif3</h4>
+                    <a href="https://open.spotify.com/artist/4O15NlyKLIASxsJ0PrXPfz"><P>Lil Uzi Vert</P></a>
+
+                </div>
+
+            </div>
+
+
+            <a href=""><h2>Artists</h2></a>
+            <div class="card">
+                <div class="item">
+                    <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"><img src="https://i.scdn.co/image/ab6761610000e5eb19c2790744c792d05570bb71" alt=""></a>
+                    <div class="play-btn">
+                        <span><a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"><i class="fa-solid fa-play"></i></a></span>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY"><h4>Travis Scott</h4></a>
+                        <p>Artist</p>
+                    </div>
+                    
+
+                </div>
+                <div class="item">
+                    <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuX2RHy8NcWt4cZ5QyxOnedXJa_3rPx0JVgw&s" alt=""></a>
+                    <div class="play-btn">
+                        <span><a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"><i class="fa-solid fa-play"></i></a></span>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"><h4>The Weeknd</h4></a>
+                        <p>Artist</p>
+                    </div>
+                    
+
+                </div> 
+                <div class="item">
+                    <a href="https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR"><img src="https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b" alt=""></a>
+                    <div class="play-btn">
+                        <span><a href="https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR"><i class="fa-solid fa-play"></i></a></span>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR"><h4>Eminem</h4></a>
+                        <p>Artist</p>
+                    </div>
+                    
+
+                </div> 
+                <div class="item">
+                    <a href="https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H"><img src="https://i.scdn.co/image/ab67616d00001e026dee21d6cd1823e4d6231d37" alt=""></a>
+                    <div class="play-btn">
+                        <span><a href="https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H"><i class="fa-solid fa-play"></i></a></span>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H"><h4>Rihanna</h4></a>
+                        <p>Artist</p>
+                    </div>
+                    
+
+                </div> 
+                <div class="item">
+                    <a href="https://open.spotify.com/artist/3DbwFQlvLxRSi2uX8mf81A"><img src="https://i.scdn.co/image/ab6761610000e5ebd341871daa2c688ea24dcf02" alt=""></a>
+                    <div class="play-btn">
+                        <span><a href="https://open.spotify.com/artist/3DbwFQlvLxRSi2uX8mf81A"><i class="fa-solid fa-play"></i></a></span>
+                    </div>
+                    <div style="text-align: center;">
+                        <a href="https://open.spotify.com/artist/3DbwFQlvLxRSi2uX8mf81A"><h4>Sexyy Redd</h4></a>
+                        <p>Artist</p>
+                    </div>
+                    
+
+                </div> 
+            
+        </div>
+
+
+        <a href=""><h2>Bollywood</h2></a>
+            <div class="card">
+                <div class="item" data-audio="audio/Fevicol Se.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e0205b3ca44c67b40e983179d1c" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Fevicol Se</h4>
+                    <a href="https://open.spotify.com/artist/0RMsiUCTjsdGjoKyhEm8Y4"><span>Mamta Sharma,</span></a>
+                    <a href="https://open.spotify.com/artist/6f5kUMXGROFtdAtxXZwing"><span>Wajid</span></a>
+
+                </div>   
+
+                <div class="item" data-audio="audio/Munni Badnaam.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e026e28d74c8eddc32542ce8924" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Munni Badnaam</h4>
+                    <a href="https://open.spotify.com/artist/6f5kUMXGROFtdAtxXZwing"><span>Mamta Sharma,</span></a>
+                    <a href="https://open.spotify.com/artist/1c9i7ZEcpmRugZrD3AgQgE"><span>Aishwarya</span></a>
+
+                </div>    
+                
+                <div class="item" data-audio="audio/Chikni Chameli.mp3">
+                    <img src = "https://i.scdn.co/image/ab67616d00001e02d54393280e88a142bf31265f" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Chikni Chameli</h4>
+                    <a href="https://open.spotify.com/artist/5fvTHKKzW44A9867nPDocM"><span>Ajay-Atul,</span>,</a>
+                    <a href="https://open.spotify.com/artist/0oOet2f43PA68X5RxKobEy"><span>Shreya Goshal</span></a>
+
+                </div>    
+                
+                <div class="item" data-audio="audio/Senorita.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e020acb5a72549287bf33b51b71" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Senorita</h4>
+                    <a href="https://open.spotify.com/artist/0XL6ie7a0NY5FM05b9Rn5L"><span>Farhan Akhtar</span></a>
+
+                </div>    
+                
+                <div class="item" data-audio="audio/Garmi.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02366d5bd2f22edaa6504721ee" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Garmi</h4>
+                    <a href="https://open.spotify.com/artist/0y59o4v8uw5crbN9M3JiL1"><span>Badshah,</span></a>
+                    <a href="https://open.spotify.com/artist/5f4QpKfy7ptCHwTqspnSJI"><span>Neha Kakkar</span></a>
+
+                </div>
+
+            </div>
+
+        <a href=""><h2>My Liked Songs</h2></a>
+            <div class="card">
+                <div class="item" data-audio="audio/Just Like Me.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e023df534189b903037f4bc3a0f" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Just Like Me</h4>
+                    <a href="https://open.spotify.com/artist/1URnnhqYAYcrqrcwql10ft"><span>21 Savage,</span></a>
+                    <a href="https://open.spotify.com/artist/3wcj11K77LjEY1PkEazffa"><span>Burna Boy</span></a>
+                    <a href="https://open.spotify.com/artist/0iEtIxbK0KxaSlF7G42ZOp"><span>& Metro Boomin</span></a>
+
+                </div>   
+
+                <div class="item" data-audio="audio/Shit Talk.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02ecadec61c18bdad3791f080b" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Shit Talk</h4>
+                    <a href="https://open.spotify.com/artist/1l61CX1j6go8arTjPH9wy0"><span>BlueBucksClan</span></a>
+
+                </div>    
+                
+                <div class="item" data-audio="audio/Jimmy Cooks.mp3">
+                    <img src = "https://i.scdn.co/image/ab67616d00001e028dc0d801766a5aa6a33cbe37" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Jimmy Cooks</h4>
+                    <a href="https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"><span>Drake,</span></a>
+                    <a href="https://open.spotify.com/artist/1URnnhqYAYcrqrcwql10ft"><span>21 Savage</span></a>
+
+                </div>    
+                
+                <div class="item" data-audio="audio/Like That.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02a46b07c291e6dfdee13b3ee8" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Like That</h4>
+                    <a href="https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i"><span>Future,</span></a>
+                    <a href="https://open.spotify.com/artist/0iEtIxbK0KxaSlF7G42ZOp"><span>Metro Boomin,</span></a>
+                    <a href="https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg"><span>Kendrick Lamar</span></a>
+                    
+
+                </div>    
+                
+                <div class="item" data-audio="audio/Back To Me.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02b2e4a1ea8a6708fc23f26e4a" alt="">
+                    <div class="play-btn">
+                        <span><i class="fa-solid fa-play"></i></span>
+                    </div>
+                    <h4>Back To Me</h4>
+                    <a href="https://open.spotify.com/artist/4xPQFgDA5M2xa0ZGo5iIsv"><span>Y$,</span></a>
+                    <a href="https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x"><span>Kanye West,</span></a>
+                    <a href="https://open.spotify.com/artist/7c0XG5cIJTrrAgEC3ULPiq"><span>Ty Dolla Sign</span></a>
+
+                </div>
+
+            </div>
+
+
+            
+        </div>
+    </div>
+
+    <div id="music-popup" class="music-popup">
+        <div class="popup-header">
+            <h3 id="track-title">Song Title</h3>
+            <button id="close-popup">&times;</button>
+        </div>
+        <audio id="audio-player" controls hidden></audio>
+        <div class="popup-controls">
+            <input type="range" id="seek-slider" value="0" min="0" max="100">
+            <div class="controls">
+                <button id="prev-btn"><i class="fa-solid fa-backward"></i></button>
+                <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                <button id="next-btn"><i class="fa-solid fa-forward"></i></button>
+            </div>
+            <input type="range" id="volume-slider" value="50" min="0" max="100">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

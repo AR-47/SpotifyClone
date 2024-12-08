@@ -1,0 +1,54 @@
+.login-header{
+    font-size:18px !important;
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+.apple-btn{
+    background-color: #fff !important;
+    color:#000 !important;
+}
+
+.google-btn{
+    background-color: red !important;
+}
+
+.prev-btn button{
+    padding: 10px 20px;
+    background: transparent;
+    align-items: left;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
+.prev-btn i{
+    color: white;
+    font-size: 22px;
+    margin-right: 20px;
+    background-color: transparent;
+    background: transparent;
+}
+.ph-btn{
+    background-color:white !important;
+    color: #000 !important;
+    border: 1px solid black !important;
+}
+label{
+    display:block;
+    text-align: left;
+}
+
+input{
+    width:80%;
+    padding: 12px 35px;
+    font-size: 14px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.sign-up-btn{
+    margin-top: 20px;
+}

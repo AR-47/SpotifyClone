@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main-section {
+        margin-left: 200px;
+    }
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #ccc6c6;
+}
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.sidebar{
+    width: 300px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0; 
+    padding: 10px;
+}
+.sidebar-nav{
+    background: #111111;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+.sidebar-nav .logo{
+    width: 120px;
+    color: white;
+
+}
+.sidebar-nav .logo img{
+    width: 100%;
+}
+.sidebar-nav ul{
+    list-style: none;
+}
+.sidebar-nav ul li{
+    padding: 10px 20px;
+}
+.sidebar-nav ul li a:hover{
+    color: #fff;
+}
+.sidebar-nav ul li a{
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 600;
+}
+.sidebar-nav ul li a i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.library::after{
+    content: '+';
+    float: right;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 15px;
+}
+.create-playlist{
+    background: #302f2f;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.sidebar-scroll{
+    height: 220px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.sidebar-scroll::-webkit-scrollbar{
+    background: transparent;
+    width: 8px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 4px;
+}
+.sidebar-scroll:hover::-webkit-scrollbar-thumb{
+    background: #5c5b5b;
+}
+
+.create-playlist h4{
+    color: #fff ;
+    font-size: 15px;
+}
+.create-playlist p{
+    color: #fff ;
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+.create-playlist button{
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: black;
+}
+.privacy ul li a{
+    text-decoration: none;
+    color:#818080;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0 6px;
+}
+.privacy ul li a:hover{
+    text-decoration: underline;
+    color: #bebcbc;
+}
+.privacy ul{
+    list-style: none;
+    margin-top: 30px;
+}
+.privacy ul li{
+    padding: 0 10px;
+    padding-bottom: 9px;
+}
+.eng-btn{
+    padding: 20 30px;   
+}
+.eng-btn button{
+    padding: 10px 30px;   
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border: 1px solid #818080;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+.eng-btn button{
+    padding: 11px 31px;   
+    border: 1px solid #fff;
+}
+
+.main-section{
+    margin-left: 300px;
+    background: #181818;
+    height: 100vh;
+    overflow-y: auto;
+    margin-bottom: auto;
+}
+
+.main-section::-webkit-scrollbar{
+    background: transparent;
+    width: 8px;
+}
+.main-section::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 4px;
+}
+.main-section:hover::-webkit-scrollbar-thumb{
+    background: #5c5b5b;
+}
+
+.main-section .top-nav{
+    padding: 20px 30px;
+    background: #131212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-section .top-nav button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.main-section .top-nav button:hover{
+    transform: scale(1.1);
+}
+.main-section .top-nav .prev-btn button i{
+    color: #838181;
+    font-size: 22px;
+    margin-right: 20px;
+}
+.icon-container .home-btn{
+    color: #838181;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 35px;
+    margin-right: 8px;
+}
+
+.home-btn:hover{
+    transform: scale(1.1);
+    color: white;
+}
+    
+.main-section .top-nav .prev-btn button i:hover{
+    color: #ffffff;
+}
+.top-nav .login-btn .sign-up{
+    color: #838181;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 25px;
+}
+.top-nav .login-btn .sign-up:hover{
+    color: #ffffff;
+}
+.top-nav .login-btn .login{
+    color: #242323;
+    font-size: 16px;
+    font-weight: 600;
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.top-nav .login-btn .login:hover{
+    background-color: #f3f3f3;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e; 
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 0%;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 1; 
+}
+
+.search-container i {
+    color: #838181;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.search-container i:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.icon-container i:hover{
+    color: white;
+    transform: scale(1.1);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    flex: 1;
+    padding: 5px;
+}
+
+.search-input::placeholder {
+    color: #aaa; 
+}
+
+
+.spotify-playlist{
+    padding: 20px 40px;
+}
+
+.spotify-playlist h2{
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.spotify-playlist h2:hover{
+    text-decoration: underline;
+}
+.spotify-playlist .card{
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.spotify-playlist .card .item{
+    width: 100%;
+    min-width: 140px;
+    background-color: #131212;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 6px; 
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.spotify-playlist .card .item:hover{
+    transform: scale(1.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.spotify-playlist .card .item img{
+    width: 100%;
+}
+.spotify-playlist .item h4{
+    color: #fff;
+    padding-top: 8px;
+}
+.spotify-playlist .item p{
+    color: #ccc6c6;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.spotify-playlist .item p:hover{
+    text-decoration: underline;
+}
+.spotify-playlist .play-btn{
+    position: relative;
+}
+.spotify-playlist .play-btn i{
+    position: absolute;
+    background: #2bd366;
+    border-radius: 50%;
+    padding: 10px;
+    right: 8px;
+    top: -40px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background-color: 0.3s ease;
+}
+.spotify-playlist .card .item:hover .play-btn i{
+    opacity: 1;
+    transform: translateY(-20px) scale(1.1);
+    background: #35da6e;
+    color: #000;
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.btn-link {
+    text-decoration: none;
+    display: inline-block; 
+}
+
+.btn-link button {
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.btn-link button:hover {
+    transform: scale(1.06);
+}
+
+.eng-link button{
+        padding: 11px 31px;   
+        border: 1px solid #fff;
+}
+.eng-link button:hover{
+        transform: scale(1.06);
+}
+.eng-btn .eng-link .fa-light fa-g{
+    color: #fff;
+}
+
+
+.music-popup {
+    position: fixed;
+    bottom: 0;
+    left: 300px; 
+    right: 0;
+    background: linear-gradient(145deg, #282828, #1a1a1a);
+    color: white;
+    box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.7);
+    padding: 20px 30px;
+    display: none;
+    z-index: 1000;
+    border-radius: 20px 20px 0 0;
+    animation: slideUp 0.4s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(100%) scale(0.3); 
+    }
+}
+
+.music-popup.minimized {
+    animation: slideDown 0.4s ease-in-out forwards;
+}
+
+.music-popup .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.music-popup .popup-header h3 {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.music-popup .popup-header button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.music-popup .popup-header button:hover {
+    transform: scale(1.2);
+}
+
+
+.music-popup .popup-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.music-popup .popup-controls input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #3a3a3a;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease, width 0.3s ease; 
+}
+
+.music-popup .popup-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #1db954;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.music-popup .popup-controls input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #1db954;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.music-popup .popup-controls input[type="range"]:hover {
+    background: #505050;
+}
+
+.music-popup .popup-controls .controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+}
+
+.music-popup .popup-controls .controls button {
+    background: #1db954;
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.music-popup .popup-controls .controls button:hover {
+    background: #1ed760;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5);
+}
+
+.music-popup .popup-controls input[type="range"]:hover {
+    background: #505050;
+}
+
+
+.music-popup .popup-controls #volume-slider {
+    max-width: 150px;
+}
+
+
+@media (max-width: 768px) {
+    .music-popup {
+        left: 200px;
+        padding: 15px 20px;
+    }
+
+    .music-popup .popup-header h3 {
+        font-size: 16px;
+    }
+
+    .music-popup .popup-controls .controls button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .music-popup .popup-controls input[type="range"] {
+        height: 4px;
+    }
+}
+
