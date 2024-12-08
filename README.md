@@ -1,4 +1,4 @@
-# MusicPlayer(Spotify Clone)
+# Spotify Clone
 
 Spotify Clone built with HTML, CSS, and JavaScript. This web app allows users to play, pause, seek, and adjust the volume of audio tracks. It also includes features for navigating through a playlist, showing track information, and controlling playback.
 
