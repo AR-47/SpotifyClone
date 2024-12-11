@@ -45,6 +45,9 @@ A Spotify-like web app built with HTML, CSS, JavaScript, and PHP. This project r
 - **login.css**: Stylesheet for the login page.
 - **signup.html**: Signup page structure.
 - **signup.css**: Stylesheet for the signup page.
+- **account.html**: Account details page structure.
+- **account.css**: Stylesheet for the account/setttings page.
+- **settings.html**: Settings page structure.
 - **signup.php**: PHP backend for handling user authentication and server-side logic.
 - **login.php**: PHP backend for handling user authentication and server-side logic.
 
