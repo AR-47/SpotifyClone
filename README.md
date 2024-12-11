@@ -114,10 +114,3 @@ To install XAMPP:
 - **Improved Responsiveness**: Optimize design for an enhanced mobile experience.
 - **Dark Mode**: Add a toggle for light and dark themes.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to contribute by submitting issues or pull requests. Enjoy exploring the Spotify Clone project!
