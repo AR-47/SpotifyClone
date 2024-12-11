@@ -8,16 +8,14 @@
     <link rel="stylesheet" href="login.css">
     <link rel="icon" href="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Upstring - SignUp and Login</title>
+    <title>Spotify | Login</title>
+
 </head>
 <body>
     <main>
         <div class="prev-btn">
-
             <section id="brand-image">
-            
                 <img src="images/logo-new.png" alt="">
-            
             </section>
         </div>
 
@@ -31,7 +29,8 @@
                 <a href="">
                     <button class="btn apple-btn">
                         <i class="fab fa-apple"></i>
-                        continue with apple</button>
+                        continue with apple
+                    </button>
                 </a>
 
                 <a href="">
@@ -53,19 +52,62 @@
                     <div></div>
                 </div>
 
-                <form action="login.php" method="POST">
+                <form id="loginForm">
                     <label> Email address or username. </label>
                     <input type="text" name="email" placeholder="Email address or Username" required>
 
                     <label>Password.</label>
                     <input type="password" name="password" placeholder="Password" required>
 
-
-                    <button class="sign-up-btn">Log In</button>
+                    <button type="submit" class="sign-up-btn">Log In</button>
                 </form>
                 <span>No Account? Click </span><a href="http://localhost/SpotifyClone/signup.html">here</a><span> to Signup.</span>
             </div>
         </section>
     </main>
+
+    <div class="popup" id="popup">
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const popup = document.getElementById('popup');
+        const popupMessage = document.getElementById('popupMessage');
+
+        
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            const formData = new FormData(loginForm);
+
+            fetch('login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    
+                    window.location.href = 'index.html';
+                } else {
+                    
+                    popupMessage.textContent = data.message;
+                    popup.classList.add('active');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                popupMessage.textContent = 'An unexpected error occurred. Please try again.';
+                popup.classList.add('active');
+            });
+        });
+
+        
+        function closePopup() {
+            popup.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
