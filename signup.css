@@ -165,3 +165,11 @@ input:focus {
 .sign-up-btn:hover {
     background-color: rgb(107, 206, 100) !important;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+}
