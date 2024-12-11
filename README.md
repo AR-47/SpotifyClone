@@ -68,8 +68,8 @@ To install XAMPP:
 
 1. Open your browser and go to `http://localhost/phpmyadmin`.
 2. In phpMyAdmin, click on **Databases** in the top menu.
-3. Under the "Create database" section, enter the name `spotify` for the database and click **Create**.
-4. After the database is created, click on the `spotify` database in the left sidebar to open it.
+3. Under the "Create database" section, enter the name `spotifyclone` for the database and click **Create**.
+4. After the database is created, click on the `spotifyclone` database in the left sidebar to open it.
 5. Click on the **SQL** tab and paste the following SQL query to create the `users` table:
 
     ```sql
