@@ -117,3 +117,6 @@ To install XAMPP:
 - **Improved Responsiveness**: Optimize design for an enhanced mobile experience.
 - **Dark Mode**: Add a toggle for light and dark themes.
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE.md) file for details.
