@@ -1,70 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body{
+body {
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    color:#fff;
+    color: #fff;
     padding-bottom: 90px;
-    background-color:#1D1D1D;
+    background-color: #1D1D1D;
 }
 
-#brand-image{
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1D1D1D;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #5c5b5b; 
+    border-radius: 5px;
+    border: 2px solid #1D1D1D; 
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #5c5b5b; 
+}
+
+#brand-image {
     width: 100%;
     margin: auto;
     text-align: center;
     padding: 30px;
     box-sizing: border-box;
 }
-.prev-btn button{
+
+.prev-btn button {
     padding: 10px 20px;
     background: transparent;
     align-items: left;
     background-color: transparent;
     margin-top: 20px;
     margin-left: 10px;
-
 }
-.prev-btn i{
+
+.prev-btn i {
     color: white;
     font-size: 22px;
     margin-right: 20px;
     background-color: transparent;
     background: transparent;
 }
-#brand-image img{
+
+#brand-image img {
     height: 100px;
 }
 
-
-.form-wrapper{
-    width:30%;
+.form-wrapper {
+    width: 30%;
     margin: auto;
     text-align: center;
 }
-.form-wrapper h1{
+
+.form-wrapper h1 {
     font-size: 28px;
     text-transform: capitalize;
 }
 
-.apple-btn{
+.apple-btn {
     background-color: #fff !important;
-    color:#000 !important;
+    color: #000 !important;
 }
 
-.google-btn{
+.google-btn {
     background-color: red !important;
 }
 
-.form-wrapper button{
+.form-wrapper button {
     width: 100%;
     padding: 15px 32px;
     border-radius: 25px;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    background-color:#234794;
+    background-color: #234794;
     color: #fff;
     border: none;
     outline: none;
@@ -72,32 +93,39 @@ body{
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.form-wrapper button:hover{
+
+.form-wrapper button:hover {
     transform: scale(1.05);
 }
-.form-wrapper button i{
+
+.form-wrapper button i {
     margin-right: 10px;
 }
-.divider{
+
+.divider {
     display: flex;
     justify-content: space-between;
 }
-.divider div{
+
+.divider div {
     background-color: rgb(149, 233, 13);
     height: 1px;
     width: 100%;
     margin: 14px;
     margin-top: 30px;
 }
-form{
+
+form {
     padding: 20px;
     text-align: left;
 }
-form label{
+
+form label {
     display: block;
     font-size: 16px;
 }
-form input{
+
+form input {
     width: 90%;
     padding: 10px 20px;
     border: 2px solid rgb(149, 233, 13);
@@ -106,32 +134,34 @@ form input{
     margin-bottom: 35px;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
-.gender-container{
+
+.gender-container {
     display: flex;
     margin-top: 5px;
     justify-content: space-evenly;
 }
-.gender{
+
+.gender {
     display: inline-block;
-    width:auto;
-    margin: 0; 
+    width: auto;
+    margin: 0;
     margin-right: 3px;
 }
 
-.gender-radio{
+.gender-radio {
     width: auto;
     display: inline-block;
     padding: 0;
 }
 
-.sign-up-btn{
-    width:100% !important;
+.sign-up-btn {
+    width: 100% !important;
     background-color: rgb(78, 151, 73) !important;
 }
 
-.sign-up-btn:hover{
+.sign-up-btn:hover {
     background-color: rgb(107, 206, 100) !important;
 }

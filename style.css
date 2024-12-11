@@ -6,6 +6,7 @@
 body{
     background: #000;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 @media (max-width: 768px) {
     .sidebar {
@@ -259,11 +260,13 @@ a:hover{
 .search-container i:hover {
     color: white;
     transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .icon-container i:hover{
     color: white;
     transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .search-input {
@@ -279,6 +282,86 @@ a:hover{
 .search-input::placeholder {
     color: #aaa; 
 }
+
+
+.account{
+    color: #838181;
+    margin-right: 25px;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background-color: #1e1e1e; 
+}
+
+.account {
+    color: #838181;
+    transition: transform 0.3s ease;
+}
+
+.account i {
+    color: #838181;
+
+}
+
+.account:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.account:hover i {
+    color: white;
+
+}
+
+
+.dropdown button{
+    background-color: white;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+
+ .dropdown .content {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e; 
+    min-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .content{
+    display: block;
+}
+
+
+.dropdown  a {
+    display: block;
+    color: #b3b3b3; 
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.dropdown  a:hover{
+    background-color: rgb(135, 132, 132);  
+    color: white;
+    border-radius: 10px;
+}
+
+
+
 
 
 .spotify-playlist{
