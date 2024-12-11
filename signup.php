@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if ($stmt->execute()) {
         
-        header("Location: login.html");
+        header("Location: index.html");
         exit();
     } else {
         echo "Error: " . $stmt->error;
