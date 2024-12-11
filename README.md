@@ -5,13 +5,16 @@ A Spotify-like web app built with HTML, CSS, JavaScript, and PHP. This project r
 ## Screenshots
 
 ### Main Page
-![Main Page Screenshot](https://github.com/user-attachments/assets/bfa89522-d2a7-45cf-99b2-9831dc89bd92)
+![Screenshot 2024-12-11 142752](https://github.com/user-attachments/assets/5e61cb31-8551-4ecf-8e89-bda9ba474a86)
+
 
 ### Login Page
-![Login Page Screenshot](https://github.com/user-attachments/assets/b7bf13bb-9b5c-4602-b4f1-743e3c98d998)
+![Screenshot 2024-12-11 142731](https://github.com/user-attachments/assets/19b3489b-d51f-4de2-9564-fd15d51d4dea)
+
 
 ### Signup Page
-![Signup Page Screenshot](https://github.com/user-attachments/assets/21af9264-b436-47af-902c-1c7cab85ab75)
+![Screenshot 2024-12-11 142820](https://github.com/user-attachments/assets/2c461f05-622e-4347-ac1f-a254a5b7fdb2)
+
 
 ## Features
 
