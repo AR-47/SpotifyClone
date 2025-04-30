@@ -1,82 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="account.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Simple style for feedback message */
+        #profileMessage {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .success-message {
+            color: green;
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="container light-style flex-grow-1 container-p-y">
-        <h4 class="font-weight-bold py-3 mb-4">
-            Account settings
-        </h4>
+<div class="container light-style flex-grow-1 container-p-y">
+    <h4 class="font-weight-bold py-3 mb-4">Account settings</h4>
+
+    <form id="profileForm">
         <div class="card overflow-hidden">
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
                         <a class="list-group-item list-group-item-action active" data-toggle="list"
-                            href="#account-general">General</a>
+                           href="#account-general">General</a>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="account-general">
                             <div class="card-body media align-items-center">
-                                <img src="https://i.scdn.co/image/ab676161000051747baf6a3e4e70248079e48c5a" alt
-                                    class="d-block ui-w-80">
-                                <div class="media-body ml-4">
+                                <img src="https://i.scdn.co/image/ab676161000051747baf6a3e4e70248079e48c5a" alt="User Avatar"
+                                     class="d-block ui-w-80 rounded-circle"> <div class="media-body ml-4">
                                     <label class="btn btn-outline-primary">
                                         Upload new photo
                                         <input type="file" class="account-settings-fileinput">
                                     </label> &nbsp;
                                     <button type="button" class="btn btn-default md-btn-flat">Reset</button>
-                                    <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                                    <div class="text-light small mt-1" style="color: #6c757d !important;"> Allowed JPG, GIF or PNG. Max size of 800K
+                                    </div>
                                 </div>
                             </div>
                             <hr class="border-light m-0">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label class="form-label">Username</label>
-                                    <input type="text" class="form-control mb-1" value="Adithyayadav13">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" value="Adithya Yadav">
-                                </div>
+                                    <input type="text" name="username" id="username" class="form-control mb-1" required> </div>
                                 <div class="form-group">
                                     <label class="form-label">E-mail</label>
-                                    <input type="text" class="form-control mb-1" value="adithyayadav13@mail.com">
-                                    <div class="alert alert-warning mt-3">
-                                        Your email is not confirmed. Please check your inbox.<br>
-                                        <a href="javascript:void(0)">Resend confirmation</a>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Company</label>
-                                    <input type="text" class="form-control" value="Company Ltd.">
+                                    <input type="email" name="email" id="email" class="form-control mb-1" required> </div>
                                 </div>
                             </div>
                         </div>
-                        
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
+        <div id="profileMessage"></div>
         <div class="text-right mt-3">
-            <a href="index.html"><button type="button" class="btn btn-primary">Save changes</button></a>&nbsp;
+            <button type="submit" class="btn btn-primary">Save changes</button>&nbsp;
             <a href="index.html"><button type="button" class="btn btn-default">Cancel</button></a>
         </div>
-    </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
+    </form>
+</div>
 
-    </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // --- Fetch user data on page load ---
+        $.ajax({
+            url: 'account.php', // PHP script to fetch data
+            method: 'GET',
+            dataType: 'json',
+            success: function (res) {
+                if (res.success && res.data) {
+                    $('#username').val(res.data.username);
+                    $('#name').val(res.data.name);
+                    $('#email').val(res.data.email);
+                    $('#company').val(res.data.company || ''); // Handle null company value
+                } else {
+                    // Display error message from PHP or a default one
+                    $('#profileMessage').text(res.message || 'Failed to load profile data. Please ensure you are logged in.').removeClass('success-message').addClass('error-message');
+                     // Optionally disable form fields if data fails to load
+                     $('#profileForm :input').prop('disabled', true);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                // Handle network errors or unexpected PHP errors
+                 console.error("AJAX Error:", textStatus, errorThrown);
+                $('#profileMessage').text('An error occurred while loading profile data. Please try again later.').removeClass('success-message').addClass('error-message');
+                 $('#profileForm :input').prop('disabled', true);
+            }
+        });
+
+        // --- Handle form submission for saving data ---
+        $('#profileForm').on('submit', function(event) {
+            event.preventDefault(); // Prevent traditional form submission
+
+            const formData = $(this).serialize(); // Get form data
+            const $messageArea = $('#profileMessage');
+
+            // Clear previous messages
+            $messageArea.text('').removeClass('success-message error-message');
+
+            $.ajax({
+                url: 'account.php', // PHP script to update data
+                method: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function(res) {
+                    if (res.success) {
+                        $messageArea.text(res.message || 'Profile updated successfully!').removeClass('error-message').addClass('success-message');
+                    } else {
+                        $messageArea.text(res.message || 'Failed to update profile.').removeClass('success-message').addClass('error-message');
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                     console.error("AJAX Error:", textStatus, errorThrown);
+                    $messageArea.text('An error occurred while saving. Please try again later.').removeClass('success-message').addClass('error-message');
+                }
+            });
+        });
+    });
+</script>
 </body>
-
 </html>
