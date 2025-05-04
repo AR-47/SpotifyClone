@@ -468,36 +468,46 @@ a:hover{
 }
 
 
+/* --- START: Updated Music Popup Styles --- */
+
 .music-popup {
     position: fixed;
     bottom: 0;
-    left: 300px; 
+    left: 300px; /* Adjust if sidebar width changes */
     right: 0;
-    background: linear-gradient(145deg, #282828, #1a1a1a);
+    /* background: rgba(24, 24, 24, 0.9); Slightly transparent background */
+    background: #181818; /* Solid background matching main section */
+    /* backdrop-filter: blur(10px); /* Optional: Adds a blur effect if using transparency */
     color: white;
-    box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.7);
-    padding: 20px 30px;
-    display: none;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    padding: 15px 30px; /* Slightly reduced padding */
+    display: none; /* Keep hidden initially */
     z-index: 1000;
-    border-radius: 20px 20px 0 0;
-    animation: slideUp 0.4s ease-in-out;
+    /* Removed border-radius for a sharper look, matching Spotify often */
+    /* border-radius: 12px 12px 0 0; /* Alternative: Smaller rounding */
+    animation: slideUp 0.4s ease-out; /* Use ease-out for smoother end */
+    border-top: 1px solid #282828; /* Subtle top border */
 }
 
 @keyframes slideUp {
     from {
         transform: translateY(100%);
+        opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes slideDown {
     from {
         transform: translateY(0) scale(1);
+        opacity: 1;
     }
     to {
-        transform: translateY(100%) scale(0.3); 
+        transform: translateY(100%) scale(0.9); /* Smoother slide down */
+        opacity: 0;
     }
 }
 
@@ -509,28 +519,33 @@ a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-    font-weight: 600;
+    margin-bottom: 12px; /* Adjusted margin */
+    font-weight: 500; /* Slightly less bold */
 }
 
 .music-popup .popup-header h3 {
-    font-size: 18px;
+    font-size: 16px; /* Adjusted size */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin: 0; /* Reset default margin */
+    color: #ffffff; /* Brighter title */
 }
 
 .music-popup .popup-header button {
     background: transparent;
     border: none;
-    color: #fff;
-    font-size: 24px;
+    color: #b3b3b3; /* Grey close button */
+    font-size: 22px; /* Slightly smaller close button */
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Added color transition */
+    padding: 5px; /* Add some padding for easier clicking */
+    line-height: 1; /* Ensure icon is centered */
 }
 
 .music-popup .popup-header button:hover {
-    transform: scale(1.2);
+    color: #ffffff; /* White on hover */
+    transform: scale(1.1);
 }
 
 
@@ -539,96 +554,150 @@ a:hover{
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping if possible */
 }
 
+/* --- Slider Styles --- */
 .music-popup .popup-controls input[type="range"] {
     -webkit-appearance: none;
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: #3a3a3a;
+    appearance: none; /* Standard property */
+    width: 100%; /* Takes available space */
+    height: 4px; /* Thinner track */
+    border-radius: 2px;
+    background: #4d4d4d; /* Darker grey track */
     outline: none;
     cursor: pointer;
-    transition: background 0.3s ease, width 0.3s ease; 
+    transition: background 0.3s ease;
+    margin: 0 10px; /* Add some margin */
 }
 
+/* Thumb (the draggable circle) */
 .music-popup .popup-controls input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #1db954;
+    appearance: none;
+    width: 14px; /* Slightly smaller thumb */
+    height: 14px;
+    background: #ffffff; /* White thumb */
     border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
+    border: none; /* Remove default border */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .music-popup .popup-controls input[type="range"]::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: #1db954;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
     border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease; 
+    transition: background 0.2s ease, transform 0.2s ease;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
+/* Hover effects for sliders */
 .music-popup .popup-controls input[type="range"]:hover {
-    background: #505050;
+    background: #5e5e5e; /* Slightly lighter track on hover */
 }
 
+.music-popup .popup-controls input[type="range"]:hover::-webkit-slider-thumb {
+    background: #1db954; /* Green thumb on hover */
+    transform: scale(1.1);
+}
+
+.music-popup .popup-controls input[type="range"]:hover::-moz-range-thumb {
+    background: #1db954;
+    transform: scale(1.1);
+}
+
+
+/* --- Control Buttons --- */
 .music-popup .popup-controls .controls {
     display: flex;
     align-items: center;
-    gap: 20px;
-    flex: 1;
+    gap: 15px; /* Reduced gap */
+    flex-grow: 0; /* Don't grow */
+    flex-shrink: 0; /* Don't shrink */
     justify-content: center;
 }
 
 .music-popup .popup-controls .controls button {
-    background: #1db954;
+    background: transparent; /* Transparent background */
     border: none;
-    color: white;
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
+    color: #b3b3b3; /* Grey icons */
+    font-size: 20px; /* Adjust icon size */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    display: flex; /* Center icon */
+    align-items: center; /* Center icon */
+    justify-content: center; /* Center icon */
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove previous shadow */
 }
 
 .music-popup .popup-controls .controls button:hover {
-    background: #1ed760;
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.5);
+    color: #ffffff; /* White icons on hover */
+    transform: scale(1.1); /* Keep scale effect */
+    background: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
 }
 
-.music-popup .popup-controls input[type="range"]:hover {
-    background: #505050;
+/* Style the Play/Pause button differently */
+.music-popup .popup-controls .controls button#play-pause-btn {
+    background: #ffffff; /* White background */
+    color: #000000; /* Black icon */
+    width: 42px; /* Slightly larger */
+    height: 42px;
+    font-size: 18px; /* Adjust icon size if needed */
 }
 
+.music-popup .popup-controls .controls button#play-pause-btn:hover {
+    transform: scale(1.05); /* Smaller scale effect */
+    background: #f0f0f0; /* Slightly off-white on hover */
+    color: #000000;
+}
 
+/* Volume Slider Specifics */
 .music-popup .popup-controls #volume-slider {
-    max-width: 150px;
+    max-width: 120px; /* Reduced max width */
+    width: 100px; /* Fixed width */
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .music-popup {
-        left: 200px;
-        padding: 15px 20px;
+        left: 200px; /* Ensure this matches sidebar width */
+        padding: 12px 20px; /* Adjust padding */
     }
 
     .music-popup .popup-header h3 {
-        font-size: 16px;
+        font-size: 14px; /* Smaller title on mobile */
     }
 
     .music-popup .popup-controls .controls button {
-        width: 40px;
-        height: 40px;
+        width: 36px; /* Smaller buttons */
+        height: 36px;
         font-size: 18px;
     }
 
-    .music-popup .popup-controls input[type="range"] {
-        height: 4px;
+     .music-popup .popup-controls .controls button#play-pause-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .music-popup .popup-controls #volume-slider {
+        max-width: 80px;
+        width: 80px;
+    }
+
+     .music-popup .popup-controls input[type="range"] {
+        margin: 0 5px;
     }
 }
 
+/* --- END: Updated Music Popup Styles --- */
